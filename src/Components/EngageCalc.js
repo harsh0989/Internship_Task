@@ -22,7 +22,7 @@ const EngageCalc = () => {
     let options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '1ec2acfea8mshb104f339e4ee10ap1d1da2jsnd95892a95fd9',
+        'X-RapidAPI-Key': 'a9ff4fe50fmsh72ddcea60c622d6p100451jsn1d1d2b2ee660',
         'X-RapidAPI-Host': 'instagram-scraper-data.p.rapidapi.com'
       }
     };
@@ -62,7 +62,7 @@ const EngageCalc = () => {
       let options = {
         method: 'GET',
         headers: {
-          'X-RapidAPI-Key': '1ec2acfea8mshb104f339e4ee10ap1d1da2jsnd95892a95fd9',
+          'X-RapidAPI-Key': 'a9ff4fe50fmsh72ddcea60c622d6p100451jsn1d1d2b2ee660',
           'X-RapidAPI-Host': 'instagram-scraper-data.p.rapidapi.com'
         }
       };
