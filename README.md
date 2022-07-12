@@ -1,3 +1,4 @@
+The deployed webapp is on https://engagement-rate-finder.netlify.app/
 This is a project to calculate the engagement rate of an instagram account.
 How is the rate calculated?
 The engagement rate is calculated by the following formula
@@ -5,8 +6,11 @@ The engagement rate is calculated by the following formula
         Rate= (Total number of likes on the account + Total number of comments on the account)/number of followers * 100
 
 Note: The engagement rate calculators that I came across calculated the rate based on the latest 12 posts. However this webapp is created to check the overall engagement rate i.e. from the time the account was created. The webapp also shows the average number of likes and average number of comments per post
-The webapp also displays per post engagement rate that can help the user to know that which type of content is best for him/her to get maximum reach
-I tried to display the images in the post however they cannot be display as instagram blocks it for privacy reasons however on clicking a particular post one will be redirected to the image link where one can see it
+        The webapp also displays per post engagement rate that can help the user to know that which type of content is best for him/her to get maximum reach
+I tried to display the images in the post however they cannot be display as instagram blocks it for privacy reasons however on clicking a particular post one will be redirected to the image link where one can see it.
+
+
+<p><img src="https://drive.google.com/uc?export=download&id=1NLKhLaJr9jwf6ASryu6ObvrVzGswXuSK"/></p>
 ## Available Scripts
 
 In the project directory, you can run:

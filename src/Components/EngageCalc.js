@@ -22,7 +22,7 @@ const EngageCalc = () => {
     let options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': 'a9ff4fe50fmsh72ddcea60c622d6p100451jsn1d1d2b2ee660',
+        'X-RapidAPI-Key': `${process.env.REACTAPP_API_KEY}`,
         'X-RapidAPI-Host': 'instagram-scraper-data.p.rapidapi.com'
       }
     };
@@ -62,7 +62,7 @@ const EngageCalc = () => {
       let options = {
         method: 'GET',
         headers: {
-          'X-RapidAPI-Key': 'a9ff4fe50fmsh72ddcea60c622d6p100451jsn1d1d2b2ee660',
+          'X-RapidAPI-Key': `${process.env.REACTAPP_API_KEY}`,
           'X-RapidAPI-Host': 'instagram-scraper-data.p.rapidapi.com'
         }
       };
@@ -94,7 +94,7 @@ const EngageCalc = () => {
       <Paper style={{ backgroundColor: 'white', margin: '-5% 10% 5%' }}>
         <Grid container sx={{ padding: '3%' }}>
           <Grid item xs={9} >
-            <TextField sx={{ width: '100%', borderRadius: '10px' }} onChange={findUser}></TextField>
+            <TextField sx={{ width: '100%', borderRadius: '10px' }} label="Enter UserName" onChange={findUser}></TextField>
           </Grid>
           <Grid item xs={3}>
             <Button onClick={fetchdata} sx={{ fontFamily:'Poppins',backgroundColor: '#D22696', width: '90%', height: '100%', color: 'white', "&:hover": { backgroundColor: 'white', color: '#D22696', border: '2PX solid #D22696' }, borderRadius: '10px' }}>Calculate</Button>
@@ -105,7 +105,7 @@ const EngageCalc = () => {
         <Paper elevation={2} sx={{minHeight:'7vh',padding:'2%'}}>
           <Grid container sx={{padding:'5%'}}>
             <Grid item sx={{ display: 'flex', flexDirection: 'column',alignItems:'center',justifyContent:'center' }} xs={3}>
-              <img src={profilePic} style={{ borderRadius: '50%' }} onClick={()=>window.open(profilePic)} />
+              <img src={profilePic} style={{ borderRadius: '50%',cursor:'pointer' }} onClick={()=>window.open(profilePic)} />
             </Grid>
             <Grid item sx={{ display: 'flex', flexDirection: 'column',alignItems:'center',justifyContent:'center' }} xs={3}>
               <Typography sx={{fontFamily: 'Poppins'}}>Overall Engagement Rate</Typography>
@@ -125,8 +125,8 @@ const EngageCalc = () => {
             {
               allPosts.map((post, index) => {
                 return <Grid item key={index} xs={4}>
-                  <Card>
-                    <CardMedia component="img" image={post.node.display_url} sx={{ border: 'none' }} onClick={()=>window.open(post.node.display_url)} ></CardMedia>
+                  <Card sx={{cursor:'pointer'}} onClick={()=>window.open(post.node.display_url)}>
+                    <CardMedia component="img" image={post.node.display_url} sx={{ border: 'none' }} ></CardMedia>
                     <Grid container>
                       <Grid item xs={4} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'start' }}>
                         <StarIcon /> {(((post.node.edge_media_preview_like.count + post.node.edge_media_to_comment.count) / followers) * 100).toFixed(2)}
