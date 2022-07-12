@@ -105,7 +105,7 @@ const EngageCalc = () => {
         <Paper elevation={2} sx={{minHeight:'7vh',padding:'2%'}}>
           <Grid container sx={{padding:'5%'}}>
             <Grid item sx={{ display: 'flex', flexDirection: 'column',alignItems:'center',justifyContent:'center' }} xs={3}>
-              <img src={profilePic.slice(1, -1)} style={{ borderRadius: '50%' }} />
+              <img src={profilePic} style={{ borderRadius: '50%' }} onClick={()=>window.open(profilePic)} />
             </Grid>
             <Grid item sx={{ display: 'flex', flexDirection: 'column',alignItems:'center',justifyContent:'center' }} xs={3}>
               <Typography sx={{fontFamily: 'Poppins'}}>Overall Engagement Rate</Typography>
@@ -126,7 +126,7 @@ const EngageCalc = () => {
               allPosts.map((post, index) => {
                 return <Grid item key={index} xs={4}>
                   <Card>
-                    <CardMedia component="img" image={post.node.display_url} sx={{ border: 'none' }} ></CardMedia>
+                    <CardMedia component="img" image={post.node.display_url} sx={{ border: 'none' }} onClick={()=>window.open(post.node.display_url)} ></CardMedia>
                     <Grid container>
                       <Grid item xs={4} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'start' }}>
                         <StarIcon /> {(((post.node.edge_media_preview_like.count + post.node.edge_media_to_comment.count) / followers) * 100).toFixed(2)}
